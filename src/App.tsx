@@ -1,11 +1,20 @@
+import { Heading } from "./components/Heading";
+
+import "./styles/theme.css";
+import "./styles/global.css";
+
+
 export function App(){
     console.log("oi");
 
    return  (
    
          <div>
-            <h1>Ola mundo(do app) !</h1>     
-             <p>NICE MALUKOOO</p>
+            <Heading/>    
+             <p>NICE MALUKOOO jasdnbipasbfikabpifbspigbaskçfdnbgçkb joibfdçkgjbçabfagçkjhabfçkfbgkabfgb
+                gfhkjmçlgfknhçl~fznkçlfhkgnfdsnhçlksfnçlkjnbgoljksnjobnotjsbhljnjçldfçhgnslçñlñhjkbs
+                ihkanmogbniasbfvibpiudsbaifbvgúoi\boivbaçkbguopibngoibnfdoignfnsiouhugpçii
+             </p>
 
      </div>
     );
