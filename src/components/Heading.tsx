@@ -1,6 +1,5 @@
-import styles from './Heading.modules.css'
+import style from './Heading.module.css';
 
-export function Heading(){
-    console.log(styles);
-    return <h1 className='Heading purple'>Ola mundo(do app) !</h1>   
+export function Heading() {
+  return <h1 className={style.title}>Olá, mundo!</h1>;
 }
