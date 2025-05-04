@@ -11,13 +11,13 @@ export function App(){
    
          <div>
            <Heading>
-            
+           
             Ola mundo nice<button>
                <TimerIcon/>
             </button>
             
             </Heading>
-                  
+            
              <p>NICE MALUKOOO jasdnbipasbfikabpifbspigbaskçfdnbgçkb joibfdçkgjbçabfagçkjhabfçkfbgkabfgb
                 gfhkjmçlgfknhçl~fznkçlfhkgnfdsnhçlksfnçlkjnbgoljksnjobnotjsbhljnjçldfçhgnslçñlñhjkbs
                 ihkanmogbniasbfvibpiudsbaifbvgúoi\boivbaçkbguopibngoibnfdoignfnsiouhugpçii
