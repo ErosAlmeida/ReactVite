@@ -1,29 +1,33 @@
-import { Heading } from "./components/Heading";
-
 import "./styles/theme.css";
 import "./styles/global.css";
-import { TimerIcon } from "lucide-react";
 
+export function App() {
 
-export function App(){
+   return <>
 
-   return  (
-   
-         <div>
-           <Heading>
-           
-            Ola mundo nice<button>
-               <TimerIcon/>
-            </button>
-            
-            </Heading>
-            
-             <p>NICE MALUKOOO jasdnbipasbfikabpifbspigbaskçfdnbgçkb joibfdçkgjbçabfagçkjhabfçkfbgkabfgb
-                gfhkjmçlgfknhçl~fznkçlfhkgnfdsnhçlksfnçlkjnbgoljksnjobnotjsbhljnjçldfçhgnslçñlñhjkbs
-                ihkanmogbniasbfvibpiudsbaifbvgúoi\boivbaçkbguopibngoibnfdoignfnsiouhugpçii
-             </p>
+      <div className="container">
+         <div className="content">
+            <section>LOGO</section>
+         </div>
+      </div>
 
-     </div>
-    );
+      <div className="container">
+         <div className="content">
+            <section>MENU</section>
+         </div>
+      </div>
+
+      <div className="container">
+         <div className="content">
+            <section>FORM</section>
+         </div>
+      </div>
+
+      <div className="container">
+         <div className="content">
+            <section>FOOTER</section>
+         </div>
+      </div>
+   </>;
 }
 
