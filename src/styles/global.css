@@ -29,3 +29,21 @@ body{
     margin: 3.2rem;
 
 }
+
+.form{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.formRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.4rem;
+
+}
