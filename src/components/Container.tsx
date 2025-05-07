@@ -1,12 +1,16 @@
+import styles from './Heading.module.css';
+
+
 type ContainerProps = {
 
     children: React.ReactNode;
 }
 
 export function Container({children} : ContainerProps){
-<div className="container">
-         <div className="content">
-            <section>{children}</section>
-         </div>
+   return(
+<div className={styles.container}>
+         <div className={styles.content}> {children}</div>
       </div>
+
+   );
 }
