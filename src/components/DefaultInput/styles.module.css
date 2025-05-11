@@ -1,0 +1,7 @@
+input{
+    background: transparent;
+    border: none;
+    text-align: center;
+
+    border: 0.2rem solid var(--primary);
+}
