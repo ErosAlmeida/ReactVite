@@ -26,7 +26,7 @@ export function App() {
       <Container>
         <form className = 'form' action=''>
             <div className="formRow">
-                  <DefaultInput labelText="TESTANDO MONSTRO" id='meuInput' type = "text" title="NICEEE" placeholder="Digite Algo" disabled/>
+                  <DefaultInput labelText="TESTANDO MONSTRO" id='meuInput' type = "text" title="NICEEE" placeholder="Digite Algo"/>
             </div>
 
             <div className="formRow">
