@@ -8,12 +8,23 @@ import { CounterDown } from "./components/CountDown";
 import { DefaultInput } from "./components/DefaultInput";
 import { Cycles } from "./components/Cycles";
 import { DefaultButton } from "./components/DefaultButton";
-import { PlayCircleIcon, StopCircleIcon } from "lucide-react";
+import { PlayCircleIcon } from "lucide-react";
 import { Footer } from "./components/Footer";
+import { Heading } from "./components/Heading";
 
 export function App() {
 
+  const numero = 0;
+
+  function HandleClick(){
+    console.log(numero, Date.now());
+  }
+
   return <>
+
+  <Heading>{numero}</Heading>
+  <button onClick={HandleClick}>Aumenta</button>
+
 
     <Container>
       <Logo />
@@ -30,7 +41,7 @@ export function App() {
     <Container>
       <form className='form' action=''>
         <div className="formRow">
-          <DefaultInput labelText="TESTANDO MONSTRO" id='meuInput' type="text" title="NICEEE" placeholder="Digite Algo" />
+          <DefaultInput labelText={numero.toString()} id='meuInput' type="text" title="NICEEE" placeholder="Digite Algo" />
         </div>
 
         <div className="formRow">
