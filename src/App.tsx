@@ -14,15 +14,23 @@ import { Heading } from "./components/Heading";
 
 export function App() {
 
-  const numero = 0;
+  let numero = 0;
 
   function HandleClick(){
+    const span = document.getElementById('numero');
+
+    if(!span) return;
+
+    numero += 1;
+    span.innerText = numero.toString();
     console.log(numero, Date.now());
   }
 
   return <>
 
-  <Heading>{numero}</Heading>
+  <Heading>Numero:
+    <span id="numero">{numero}</span>
+  </Heading>
   <button onClick={HandleClick}>Aumenta</button>
 
 
