@@ -16,7 +16,7 @@ export function Menu() {
     console.log('Clicado', Date.now());
 
     setTheme(prevTheme => {
-      const nextTheme = prevTheme === 'dark' | 'light' : 'dark';
+      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
       return nextTheme;
     });
 
