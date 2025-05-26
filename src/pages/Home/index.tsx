@@ -4,22 +4,20 @@ import { MainForm } from "../../components/MainForm";
 import { TaskStateModel } from "../../models/TaskStateModel";
 import { MainTemplate } from "../../templates/MainTemplates";
 
-type HomeProps = {
+export type HomeProps = {
   state: TaskStateModel;
   setState: React.Dispatch<React.SetStateAction<TaskStateModel>>;
 };
 
 export function Home(props: HomeProps) {
-  //const { state, setState } = props;
-
   return (
     <MainTemplate>
       <Container>
-        <CounterDown />
+        <CounterDown {...props} />
       </Container>
 
       <Container>
-        <MainForm />
+        <MainForm {...props} />
       </Container>
     </MainTemplate>
   );

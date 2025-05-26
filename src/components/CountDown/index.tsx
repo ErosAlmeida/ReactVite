@@ -1,12 +1,8 @@
+import { HomeProps } from "../../pages/Home";
+import styles from "./styles.module.css";
 
-import styles from './styles.module.css';
-
-
-export function CounterDown() {
+export function CounterDown({ state }: HomeProps) {
   return (
-
-    <div className={styles.container}>00:00</div>
-
-
+    <div className={styles.container}>{state.formattedSecondsRemaining}</div>
   );
 }
