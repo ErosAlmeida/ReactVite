@@ -6,6 +6,7 @@ import "./styles/global.css";
 import { Home } from "./pages/Home";
 import { TaskStateModel } from "./models/TaskStateModel";
 import { useState } from "react";
+import { TaskContext } from "./contexts/TaskContext";
 
 const initialState: TaskStateModel = {
   tasks: [],
@@ -23,5 +24,10 @@ const initialState: TaskStateModel = {
 export function App() {
   const [state, setState] = useState(initialState);
 
-  return <Home />;
+  return (
+    <TaskContext.Provider value={{ outraCoisa: 321 }}>
+      <Home />
+    </TaskContext.Provider>
+    //teste
+  );
 }
