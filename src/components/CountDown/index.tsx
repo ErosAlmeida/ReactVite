@@ -1,4 +1,4 @@
-import { useTaskContent } from "../../contexts/TaskContext";
+import { useTaskContent } from "../../contexts/TaskContext/useTaskContext";
 import styles from "./styles.module.css";
 
 export function CounterDown() {
