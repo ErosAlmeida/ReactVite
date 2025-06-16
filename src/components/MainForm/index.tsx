@@ -12,8 +12,6 @@ export function MainForm() {
 
   function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log("DEU CERTO");
-
     if (taskNameInput.current === null) return;
 
     const taskName = taskNameInput.current.value.trim();
