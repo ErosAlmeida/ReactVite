@@ -10,7 +10,6 @@ import { getNextCycle } from "../../utils/getNextCycle";
 export function MainForm() {
   const { state, setState } = useTaskContext();
   const taskNameInput = useRef<HTMLInputElement>(null);
-
   const nextCycle = getNextCycle(state.currentCycle);
   console.log(nextCycle);
 
