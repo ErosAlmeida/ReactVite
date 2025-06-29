@@ -1,23 +1,24 @@
-import { DefaultButton } from "../DefaultButton";
-import { DefaultInput } from "../DefaultInput";
 import { useRef } from "react";
-import { TaskModel } from "../../models/TaskModel";
-import { Cycles } from "../Cycles";
-import { PlayCircleIcon, StopCircleIcon } from "lucide-react";
+import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
 import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
 import { getNextCycle } from "../../utils/getNextCycle";
 import { getNextCycleType } from "../../utils/getNextCycleType";
-import { formatSecondsToMinutes } from "../../utils/formatSecundsMinutes";
+import { DefaultInput } from "../DefaultInput";
+import { TaskModel } from "../../models/TaskModel";
+import { Cycles } from "../Cycles";
+import { DefaultButton } from "../DefaultButton";
+import { PlayCircleIcon, StopCircleIcon } from "lucide-react";
 
 export function MainForm() {
-  const { state, setState } = useTaskContext();
+  const { state, dispatch } = useTaskContext();
   const taskNameInput = useRef<HTMLInputElement>(null);
 
-  //ciclos
   const nextCycle = getNextCycle(state.currentCycle);
-  const NextCycleType = getNextCycleType(nextCycle);
+  const nextCycleType = getNextCycleType(nextCycle);
+
   function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
     if (taskNameInput.current === null) return;
 
     const taskName = taskNameInput.current.value.trim();
@@ -33,40 +34,15 @@ export function MainForm() {
       startDate: Date.now(),
       completeDate: null,
       interruptDate: null,
-      duration: state.config[NextCycleType],
-      type: NextCycleType,
+      duration: state.config[nextCycleType],
+      type: nextCycleType,
     };
 
-    const secondsRemaining = newTask.duration * 60;
-
-    setState((prevState) => {
-      return {
-        ...prevState,
-        config: { ...prevState.config },
-        activeTask: newTask,
-        currentCycle: nextCycle,
-        secondsRemaining, // Conferir
-        formattedSecondsRemaining: formatSecondsToMinutes(secondsRemaining), // Conferir
-        tasks: [...prevState.tasks, newTask],
-      };
-    });
+    dispatch({ type: TaskActionTypes.START_TASK, payload: newTask });
   }
 
   function handleInterruptTask() {
-    setState((prevState) => {
-      return {
-        ...prevState,
-        activeTask: null,
-        secondsRemaining: 0,
-        formattedSecondsRemaining: "00:00",
-        tasks: prevState.tasks.map((task) => {
-          if (prevState.activeTask && prevState.activeTask.id == task.id) {
-            return { ...task, interruptDate: Date.now() };
-          }
-          return task;
-        }),
-      };
-    });
+    dispatch({ type: TaskActionTypes.INTERRUPT_TASK });
   }
 
   return (
@@ -85,6 +61,7 @@ export function MainForm() {
       <div className="formRow">
         <p>Próximo intervalo é de 25min</p>
       </div>
+
       {state.currentCycle > 0 && (
         <div className="formRow">
           <Cycles />
