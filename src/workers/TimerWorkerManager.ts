@@ -4,7 +4,7 @@ export class TimerWorkerManager {
   private worker: Worker;
 
   private constructor() {
-    //não aceita mais que alguem chame new
+    //não aceita mais alguem com new
     this.worker = new Worker(new URL("./timerWorker.js", import.meta.url));
   }
 
