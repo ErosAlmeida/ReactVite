@@ -1,9 +1,10 @@
-import { useEffect, useReducer } from "react";
-import { TaskContext } from "./TaskContext";
 import { initialTaskState } from "./initialTaskState";
+import { TaskContext } from "./TaskContext";
 import { taskReducer } from "./taskReducer";
 import { TimerWorkerManager } from "../../workers/TimerWorkerManager";
 import { TaskActionTypes } from "./taskActions";
+
+import { useEffect, useReducer } from "react";
 
 type TaskContextProviderProps = {
   children: React.ReactNode;
@@ -19,6 +20,7 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
     console.log(countDownSeconds);
 
     if (countDownSeconds <= 0) {
+      console.log("Worker COMPLETED");
       dispatch({
         type: TaskActionTypes.COMPLETE_TASK,
       });
