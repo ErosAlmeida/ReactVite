@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+A Técnica Pomodoro 🍅
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+            A Técnica Pomodoro é uma metodologia de produtividade criada por
+            Francesco Cirillo, que consiste em dividir o
+            trabalho em blocos de tempo (os famosos "Pomodoros") intercalados
+            com pausas. O objetivo é manter o foco total por um período curto e
+            garantir descansos para evitar o cansaço mental.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+            Mas no Chronos Pomodoro tem um diferencial 🚀
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+            Nosso app segue o conceito original, mas com algumas melhorias e
+            personalizações pra deixar o processo ainda mais eficiente:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+          ⚙️ Personalização do tempo</h3>
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+          🔁 Ciclos organizados em sequência
+
+            A cada ciclo completado, uma nova task é adicionada automaticamente
+            ao seu histórico, e o app já sugere o próximo ciclo (foco ou
+            descanso)
+
+          🍅 Visualização dos ciclos
+
+            Logo abaixo do cronômetro, você verá bolinhas coloridas
+            representando os ciclos:
+
+
+            🟡 Amarelo: Ciclo de trabalho (foco).
+            🟢 Verde: Descanso curto.
+            🔵 Azul: Descanso longo (aparece a cada 8 ciclos).
+
+            Assim, você sempre sabe em que parte do processo está e o que vem a
+            seguir. Não precisa mais anotar no papel ou ficar calculando de
+            cabeça!
+
+
+          📊 Histórico automático</h3>
+
+
+          Por que usar o Chronos Pomodoro?
+
+            ✅ Organize seu foco com clareza.
+            ✅ Trabalhe e descanse na medida certa.
+            ✅ Personalize seus próprios ciclos e tempos.
+            ✅ Acompanhe seu histórico automaticamente.
+
