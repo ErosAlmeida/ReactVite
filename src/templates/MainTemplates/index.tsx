@@ -12,7 +12,6 @@ export function MainTemplate({ children }: MainTemplateProps) {
     <>
       <Container>
         <Logo />
-        <Logo />
       </Container>
 
       <Container>
